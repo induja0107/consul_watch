@@ -4,7 +4,7 @@
   "author": "induja",
   "summary": "Sets up consul watch for invoking puppet agent when consul artifact_url changes",
   "license": "Apache-2.0",
-  "source": "",
+  "source": "https://github.com/induja0107/consul_watch.git",
   "project_page": "",
   "issues_url": "",
   "dependencies": [
