@@ -1,0 +1,15 @@
+{
+  "name": "induja-consul_watch",
+  "version": "1.0.0",
+  "author": "induja",
+  "summary": "Sets up consul watch for invoking puppet agent when consul artifact_url changes",
+  "license": "Apache-2.0",
+  "source": "",
+  "project_page": "",
+  "issues_url": "",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+

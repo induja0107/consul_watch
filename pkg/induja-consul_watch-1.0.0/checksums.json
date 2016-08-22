@@ -1,0 +1,12 @@
+{
+  "Gemfile": "36c376f27539ded2a321b2bd432e843b",
+  "README.md": "7225c0f14d7f6821d325fdd71e35b144",
+  "Rakefile": "f4692851f7e9afcdb02721319e3f18b9",
+  "examples/init.pp": "8ff95bb4005b9248d6dd01f8261b0d22",
+  "manifests/init.pp": "8c78395e1e9cd19cd5f11e48f21c1e78",
+  "manifests/set_keyhandler.pp": "83093b3eb009abd82ce086c5b0a0d448",
+  "manifests/setup_consul_watch.pp": "66b287f9669f73cea6d4a54124483fd4",
+  "metadata.json": "3300503446635b821b236381f3bfa075",
+  "spec/classes/init_spec.rb": "82cf5e324b016eb3540051646459ad1a",
+  "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc"
+}
