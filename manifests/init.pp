@@ -15,7 +15,7 @@
 #
 # Copyright 2016 Induja Vijayaragavan, unless otherwise noted.
 #
-#class consul_watch(String $war_url) {
+class consul_watch(String $war_url) {
 
   notice("\$war_url comes back as  ${war_url}")
 
@@ -57,4 +57,4 @@
     hasstatus  => true,
     hasrestart => true,
   }
-#}
+}
