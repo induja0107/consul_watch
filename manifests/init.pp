@@ -15,10 +15,24 @@
 #
 # Copyright 2016 Induja Vijayaragavan, unless otherwise noted.
 #
-class consul_watch(String $war_url) {
+#class consul_watch(String $war_url) {
 
   notice("\$war_url comes back as  ${war_url}")
   
+  file { '/opt/continuous_delivery' :
+    ensure => 'directory',
+    mode   => '0755',
+    owner  => 'root',
+    group  => 'root',
+  }
+
+  file { '/opt/continuous_delivery/bin' :
+    ensure => 'directory',
+    mode   => '0755',
+    owner  => 'root',
+    group  => 'root',
+  }
+
   file { '/opt/continuous_delivery/bin/my-key-handler.sh' :
     mode    => '0755',
     owner   => 'root',
@@ -43,4 +57,4 @@ class consul_watch(String $war_url) {
     hasstatus  => true,
     hasrestart => true,
   }
-}
+#}
