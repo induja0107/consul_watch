@@ -14,9 +14,12 @@
 
 ## Description
 
-This module creates a service for consul watch and triggers a puppet agent run if the key changes.
+This module creates a service for consul watch and triggers a puppet agent run if the key changes. This has been tested with rspec-puppet tests and is a working solution. 
+This module will come in handy if you have Jenkins pipeline writing to the consul, puppet agent nodes doesn't have to wait for 30 minutes for identifying that the consul key for the deployment piece has changed. Since the consul watch is set up, the moment the artifact war location changes in consul, it kicks off a puppet agent run in the node in which the watch service is running and your app gets deployed instantly. This enables faster turn over of App deployment and testing for the developers.
 
 ## Setup
+
+This sets up a service that runs in the background called consul_watch. 
 
 ### What consul_watch affects 
 
@@ -41,20 +44,21 @@ Steps:
      3) Do a sudo tail -f /var/log/messages to monitor the puppet agent run information.
      4) Edit the artifact_url to point to a different URL. Now the log should show that the consul watch triggered a puppet agent run.
 
+Note: deploy_path in the class denotes the path to the App in Consul - example: ESC/ContinuousDeployment/ESC-ContinuousDeployment-trunk/web
+
 ## Usage
 
 You can customize the lookup for consul key based on how you've set yours up.
 
 ## Reference
+https://www.consul.io/docs/commands/watch.html 
 
 ## Limitations
 
-None.
+Tested on Centos 6,7 and RHEL 6 & 7 nodes.
 
 ## Development
 
 Open to refactoring. Send in your PR and I shall get that added should that add more value to the module.
 
 ## Release Notes/Contributors/Etc. 
-
-# consul_watch
