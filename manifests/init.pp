@@ -1,52 +1,21 @@
-# Class: consul_watch
-# ===========================
+# == Class: consul_watch
 #
-# Full description of class consul_watch here.
+# Sets up consul watch to look for any changes in artifact_url and trigger puppet agent run 
+# Creates file and service resources for the consul watch
+# === Variables
 #
-# Parameters
-# ----------
+# deploy_path is a custom fact that is used by Puppet to decide on the Applications deployment path 
+# Pass this parameter from your class to reflect the right key in consul to watch for.
+# opt continuous delivery bin is the folder structure that will be used for placing all the Continuous Delivery shell scripts and other executables
+# === Authors
 #
-# Document parameters here.
+# induja.vijayaragavan 
 #
-# * `sample parameter`
-# Explanation of what this parameter affects and what it defaults to.
-# e.g. "Specify one or more upstream ntp servers as an array."
+# === Copyright
 #
-# Variables
-# ----------
+# Copyright 2016 Induja Vijayaragavan, unless otherwise noted.
 #
-# Here you should define a list of variables that this module would require.
-#
-# * `sample variable`
-#  Explanation of how this variable affects the function of this class and if
-#  it has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#  External Node Classifier as a comma separated list of hostnames." (Note,
-#  global variables should be avoided in favor of class parameters as
-#  of Puppet 2.6.)
-#
-# Examples
-# --------
-#
-# @example
-#    class { 'consul_watch':
-#      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
-#    }
-#
-# Authors
-# -------
-#
-# Author Name <author@domain.com>
-#
-# Copyright
-# ---------
-#
-# Copyright 2016 Your name here, unless otherwise noted.
-#
-class consul_watch {
-  # Get the facter value of deploy path 
-  # Append artifact url so that we get the complete path for the key
-  $path = join(["application/",$facts['deploy_path']])
-  $war_url = join([$path,"/artifact_url"])
+class consul_watch(String $war_url) {
 
   notice("\$war_url comes back as  ${war_url}")
   
