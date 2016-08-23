@@ -6,7 +6,7 @@
 #
 # deploy_path is a custom fact that is used by Puppet to decide on the Applications deployment path 
 # Pass this parameter from your class to reflect the right key in consul to watch for.
-# opt continuous delivery bin is the folder structure that will be used for placing all the Continuous Delivery shell scripts and other executables
+# opt continuous delivery bin is the folder structure for placing all the Continuous Delivery shell scripts and other executables
 # === Authors
 #
 # induja.vijayaragavan 
@@ -18,7 +18,7 @@
 #class consul_watch(String $war_url) {
 
   notice("\$war_url comes back as  ${war_url}")
-  
+
   file { '/opt/continuous_delivery' :
     ensure => 'directory',
     mode   => '0755',
