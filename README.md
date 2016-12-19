@@ -33,7 +33,7 @@ Consul should be set up with key value pairs for setting up the consul watch.
 Setup Consul
 Setup Puppet agent
 Setup artifact_url key in consul 
-
+Pass appropriate parameters for $war_url, $admin_path, $admin_bin_path otherwise the defaults will apply. See module manifests for comments on how to set them.
 
 ### Beginning with consul_watch
 
