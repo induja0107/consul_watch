@@ -21,8 +21,8 @@
 # Copyright 2016 Induja Vijayaragavan, unless otherwise noted.
 #
 class consul_watch(
-  String $war_url='ESC/Continuous-Deployment/ESC-ContinuousDeployment/web/artifact_url', 
-  String $admin_path='/opt/continuous_delivery', 
+  String $war_url='ESC/Continuous-Deployment/ESC-ContinuousDeployment/web/artifact_url',
+  String $admin_path='/opt/continuous_delivery',
   String $admin_bin_path='/opt/continuous_delivery/bin') {
 
   file { $admin_path :
