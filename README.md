@@ -49,9 +49,9 @@ Note: deploy_path in the class denotes the path to the App in Consul - example: 
 ## Usage
 
     class { 'consul_watch' :
-      $war_url        => 'ESC/Continuous-Deployment/ESC-ContinuousDeployment/web/artifact_url',
-      $admin_path     => '/opt/continuous_delivery',
-      $admin_bin_path => '/opt/continuous_delivery/bin',
+      war_url        => 'ESC/Continuous-Deployment/ESC-ContinuousDeployment/web/artifact_url',
+      admin_path     => '/opt/continuous_delivery',
+      admin_bin_path => '/opt/continuous_delivery/bin',
     }
 
 You can customize the lookup for consul key based on how you've set yours up.
