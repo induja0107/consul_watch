@@ -3,7 +3,7 @@
 # Sets up consul watch to look for any changes in artifact_url and trigger puppet agent run 
 # Creates file and service resources for the consul watch
 # === Parameters
-# $war_url= which war file to look for to trigger puppet agent run. Default - 'ESC/Continuous-Deployment/ESC-ContinuousDeployment/web/artifact_url'
+# $war_url= which war file to look for to trigger puppet agent run. Default - 'Continuous-Deployment/war_url'
 # $admin_path = The path for continuous delivery. Default - '/opt/continuous_delivery'
 # $admin_bin_path = Path for executing shell commands. Default - '/opt/continuous_delivery/bin'
 #
@@ -21,7 +21,7 @@
 # Copyright 2016 Induja Vijayaragavan, unless otherwise noted.
 #
 class consul_watch(
-  String $war_url='ESC/Continuous-Deployment/ESC-ContinuousDeployment/web/artifact_url',
+  String $war_url='Continuous-Deployment/war_url',
   String $admin_path='/opt/continuous_delivery',
   String $admin_bin_path='/opt/continuous_delivery/bin') {
 

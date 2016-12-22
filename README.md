@@ -44,12 +44,12 @@ Steps:
      3) Do a sudo tail -f /var/log/messages to monitor the puppet agent run information.
      4) Edit the artifact_url to point to a different URL. Now the log should show that the consul watch triggered a puppet agent run.
 
-Note: deploy_path in the class denotes the path to the App in Consul - example: ESC/ContinuousDeployment/ESC-ContinuousDeployment-trunk/web
+Note: deploy_path in the class denotes the path to the App in Consul - example: Continuous-Deployment/war_url
 
 ## Usage
 
     class { 'consul_watch' :
-      war_url        => 'ESC/Continuous-Deployment/ESC-ContinuousDeployment/web/artifact_url',
+      war_url        => 'Continuous-Deployment/war_url',
       admin_path     => '/opt/continuous_delivery',
       admin_bin_path => '/opt/continuous_delivery/bin',
     }
