@@ -15,7 +15,10 @@
 ## Description
 
 This module creates a service for consul watch and triggers a puppet agent run if the key changes. This has been tested with rspec-puppet tests and is a working solution. 
-This module will come in handy if you have Jenkins pipeline writing to the consul, puppet agent nodes doesn't have to wait for 30 minutes for identifying that the consul key for the deployment piece has changed. Since the consul watch is set up, the moment the artifact war location changes in consul, it kicks off a puppet agent run in the node in which the watch service is running and your app gets deployed instantly. This enables faster turn over of App deployment and testing for the developers.
+
+This module will come in handy if you have Jenkins pipeline writing to the consul, puppet agent nodes doesn't have to wait for 30 minutes for identifying that the consul key for the deployment piece has changed. Since the consul watch is set up, the moment the artifact war location changes in consul, it kicks off a puppet agent run in the node in which the watch service is running and your app gets deployed instantly. 
+
+This enables faster turn over of App deployment and testing for the developers.
 
 ## Setup
 
@@ -24,15 +27,21 @@ This sets up a service that runs in the background called consul_watch.
 ### What consul_watch affects 
 
 This executes a puppet agent run if the key in consul that you look for changes.
+
 This depends on consul so it it a pre-requisite that you have consul already installed on the node that you are testing this.
+
 This also depends on puppet agent being set up and is up and running.
+
 Consul should be set up with key value pairs for setting up the consul watch.
 
 ### Setup Requirements 
 
 Setup Consul
+
 Setup Puppet agent
+
 Setup artifact_url key in consul 
+
 Pass appropriate parameters for $war_url, $admin_path, $admin_bin_path otherwise the defaults will apply. See module manifests for comments on how to set them.
 
 ### Beginning with consul_watch
